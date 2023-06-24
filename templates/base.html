@@ -23,7 +23,9 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
-                <a class="navbar-brand" href={% url 'inicio:crear_futbolista' %}>Crear Futbolista</a>
+                <a class="navbar-brand" href={% url 'inicio:buscar_futbolista' %}>Futbolistas</a>
+                <a class="navbar-brand" href={% url 'inicio:crear_hockista' %}>Hockistas</a>
+                <a class="navbar-brand" href={% url 'inicio:crear_voleibolista' %}>Voleibolistas</a>
                 {% comment "" %}<a class="btn btn-primary" href={% url 'inicio:crear_futbolista' %}>Crear Futbolista</a>{% endcomment %}
             </div>
         </nav>

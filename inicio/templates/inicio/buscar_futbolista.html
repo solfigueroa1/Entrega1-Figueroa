@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Buscar Futbolista</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Buscar Futbolista
+{% endblock h1_header %}
+
+{% block contenido %}
+
+<p>{{mensaje}}</p>
+
+<button><a class="navbar-brand" href={% url 'inicio:crear_futbolista' %}>Crear Futbolista</a>
+</button>
+
+<form action="" method="get">
+    {{formulario}}
+    <button>Buscar</button>
+</form>
+
+{% for futbolista in futbolistas %}
+<li> Nombre: {{futbolista.nombre}} - Edad: {{futbolista.edad}} - Fecha de nacimiento: {{futbolista.fecha_nacimiento}}</li>
+{% endfor %}
+
+{% endblock contenido %}

@@ -6,5 +6,16 @@ class Futbolista(models.Model):
     nombre = models.CharField(max_length=40)
     edad = models.IntegerField()
     fecha_nacimiento = models.DateField(null=True)
+   
+class Hockista(models.Model):
+    nombre = models.CharField(max_length=40)
+    edad = models.IntegerField()
+    fecha_nacimiento = models.DateField(null=True)
+    
+    
+class Voleibolista(models.Model):
+    nombre = models.CharField(max_length=40)
+    edad = models.IntegerField()
+    fecha_nacimiento = models.DateField(null=True)
     
     
