@@ -33,7 +33,7 @@ def buscar_futbolista(request):
         listado_de_futbolistas = Futbolista.objects.filter(nombre__icontains=nombre_a_buscar)
         
     formulario = BuscarFutbolistaFormulario()
-    return render(request, 'inicio/buscar_futbolista.html', {'formulario': formulario, 'futbolistas': listado_de_futbolistas})
+    return render(request, 'inicio/futbolistas.html', {'formulario': formulario, 'futbolistas': listado_de_futbolistas})
     
 
 def crear_hockista(request):

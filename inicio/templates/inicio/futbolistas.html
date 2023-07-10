@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title_head %}
-<title>Buscar Futbolista</title>
+<title>Futbolistas</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-Buscar Futbolista
+Futbolistas
 {% endblock h1_header %}
 
 {% block contenido %}
@@ -19,9 +19,14 @@ Buscar Futbolista
     {{formulario}}
     <button>Buscar</button>
 </form>
+{% if futbolistas %}
 
 {% for futbolista in futbolistas %}
-<li> Nombre: {{futbolista.nombre}} - Edad: {{futbolista.edad}} - Fecha de nacimiento: {{futbolista.fecha_nacimiento}}</li>
+<li> Nombre: {{futbolista.nombre}} - Edad: {{futbolista.edad}}</li>
 {% endfor %}
+
+{% else %}
+<p>No se encontraron futbolistas</p>
+{% endif %}
 
 {% endblock contenido %}
