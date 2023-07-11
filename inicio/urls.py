@@ -13,5 +13,8 @@ urlpatterns = [
     path('futbolistas/<int:pk>/',views.DetalleFutbolista.as_view(), name='detalle_futbolista'),
     path('futbolistas/<int:pk>/modificar/',views.ModificarFutbolista.as_view(), name='modificar_futbolista'),
     path('futbolistas/<int:pk>/eliminar/',views.EliminarFutbolista.as_view(), name='eliminar_futbolista'),
+#     path('futbolistas/<int:pk>/',views., name='detalle_futbolista'),
+#     path('futbolistas/<int:pk>/modificar/',views., name='modificar_futbolista'),
+#     path('futbolistas/<int:pk>/eliminar/',views., name='eliminar_futbolista'),
 ]
 

@@ -24,7 +24,6 @@ def crear_futbolista(request):
             mensaje = f'Se creó el/la futbolista {futbolista.nombre}'
         else:
             return render(request, 'inicio/crear_futbolista.html', {'formulario' : formulario})
-        
     
     formulario = CrearFutbolistaFormulario()
     return render(request, 'inicio/crear_futbolista.html', {'formulario': formulario, 'mensaje': mensaje})
