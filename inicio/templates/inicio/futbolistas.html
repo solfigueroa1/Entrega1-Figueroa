@@ -22,7 +22,16 @@ Futbolistas
 {% if futbolistas %}
 
 {% for futbolista in futbolistas %}
-<li> Nombre: {{futbolista.nombre}} - Edad: {{futbolista.edad}}</li>
+<li> 
+    <a href={% url 'inicio:detalle_futbolista' futbolista.id %}>{{futbolista}}</a>
+    <button>
+        <a class="navbar-brand" href={% url 'inicio:modificar_futbolista' futbolista.id %}>Modificar</a>
+    </button>
+    <button>
+        <a class="navbar-brand" href={% url 'inicio:eliminar_futbolista' futbolista.id %}>Eliminar</a>
+    </button>
+
+</li>
 {% endfor %}
 
 {% else %}

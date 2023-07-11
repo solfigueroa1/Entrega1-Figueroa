@@ -2,6 +2,10 @@ from django.shortcuts import render,redirect
 from inicio.forms import CrearFutbolistaFormulario, CrearVoleibolistaFormulario, CrearHockistaFormulario, BuscarFutbolistaFormulario
 from inicio.models import Futbolista, Hockista, Voleibolista
 
+from django.views.generic.edit import DeleteView, UpdateView
+from django.views.generic.detail import DetailView
+
+from django.urls import reverse_lazy
 # Create your views here.
 
 def inicio(request):
@@ -67,4 +71,22 @@ def crear_voleibolista(request):
     
     formulario = CrearVoleibolistaFormulario()
     return render(request, 'inicio/crear_voleibolista.html', {'formulario': formulario, 'mensaje': mensaje})
+
+class DetalleFutbolista(DeleteView):
+    model = Futbolista
+    template_name = "inicio/detalle_futbolista.html"
+...
+
+class ModificarFutbolista(UpdateView):
+    model = Futbolista
+    fields = ['nombre', 'edad', 'fecha_nacimiento']
+    template_name = "inicio/modificar_futbolista.html"
+    success_url = reverse_lazy('inicio:futbolistas')
+...
+
+class EliminarFutbolista(DeleteView):
+    model = Futbolista
+    template_name = "inicio/eliminar_futbolista.html"
+    success_url = reverse_lazy('inicio:futbolistas')
+...
 
