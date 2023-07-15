@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Mensajes</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Historial de mensajes
+{% endblock h1_header %}
+
+{% block contenido %}
+
+
+<button><a class="navbar-brand" href={% url 'mensajería:crear_mensaje' %}>Nuevo Mensaje</a>
+</button>
+
+{% if mensajes %}
+
+{% for mensaje in mensajes %}
+<li> 
+    De {{mensaje.autor}} para {{mensaje.destinatario}}:  {{mensaje.cuerpo}}
+</li>
+{% endfor %}
+
+{% else %}
+<p>No se encontraron mensajes</p>
+{% endif %}
+
+{% endblock contenido %}

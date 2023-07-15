@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 
 
+
 class MiFormularioDeCreacionDeUsuarios(UserCreationForm):
     email = forms.EmailField()
     password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
@@ -12,6 +13,7 @@ class MiFormularioDeCreacionDeUsuarios(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         help_text = {k:"" for k in fields}
+        
         
 class MiFormularioDeEdiciónDeDatosDeUsuario(UserChangeForm):
     password = None

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+<title>Mensajes</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Enviar Mensaje
+{% endblock h1_header %}
+
+{% block contenido %}
+
+<form action={% url 'mensajería:crear_mensaje' %} method="POST" enctype='multipart/form-data'>
+    {% csrf_token %}
+    <table>
+        {{formulario}}
+    </table>
+    <button>Enviar</button>
+</form>
+
+{% endblock contenido %}
