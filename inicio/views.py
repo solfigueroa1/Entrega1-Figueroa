@@ -43,7 +43,7 @@ def buscar_futbolista(request):
     formulario = BuscarFutbolistaFormulario()
     return render(request, 'inicio/futbolistas.html', {'formulario': formulario, 'futbolistas': listado_de_futbolistas})
     
-
+@login_required
 def crear_hockista(request):
     mensaje = ''
     
@@ -60,6 +60,7 @@ def crear_hockista(request):
     formulario = CrearHockistaFormulario()
     return render(request, 'inicio/crear_hockista.html', {'formulario': formulario, 'mensaje': mensaje})
 
+@login_required
 def crear_voleibolista(request):
     mensaje = ''
     

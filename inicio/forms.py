@@ -6,6 +6,7 @@ class CrearFutbolistaFormulario(forms.Form):
     edad = forms.IntegerField()
     fecha_nacimiento = forms.DateField(required=False)
     descripcion = RichTextFormField()
+    autor = forms.CharField(required=False)
     imagen = forms.ImageField(required=False)
     
 class BuscarFutbolistaFormulario(forms.Form):
