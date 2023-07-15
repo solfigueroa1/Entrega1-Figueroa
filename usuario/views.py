@@ -55,17 +55,24 @@ def edicion_perfil(request):
             if avatar:
                 info_extra_user.avatar = avatar
                 info_extra_user.save()
+                
+            facebook = formulario.cleaned_data.get('facebook')
+            if facebook:
+                info_extra_user.facebook = facebook
+                info_extra_user.save()
             
             formulario.save()
             return redirect('inicio:inicio')
         else:
            return render(request, 'usuario/edicion_perfil.html', {'formulario':formulario}) 
     
-    formulario = MiFormularioDeEdiciónDeDatosDeUsuario(initial= {'avatar': request.user.infoextra.avatar}, instance=request.user)
+    formulario = MiFormularioDeEdiciónDeDatosDeUsuario(initial= {'avatar': request.user.infoextra.avatar, 'facebook': request.user.infoextra.facebook}, instance=request.user)
     return render(request, 'usuario/edicion_perfil.html', {'formulario':formulario})
 
 
 class ModificarPass(LoginRequiredMixin, PasswordChangeView):
     template_name = 'usuario/modificar_pass.html'
     success_url = reverse_lazy('usuario:editar_perfil')
-    
+
+def perfil(request):
+    return render(request, 'usuario/perfil.html')

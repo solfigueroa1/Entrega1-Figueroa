@@ -7,5 +7,6 @@ En la sección de Futbolistas es donde se encuentran desarrolladas todas las con
 El modelo de futbolistas permite crear, modificar, eliminar, buscar y consultar más detalles. 
 Sin embargo, en todas las secciones encontrarán formularios para cargar en los correspondientes espacios, nombre, edad y fecha de cumpleaños de deportistas pertenecientes a cada categoría.
 Haciendo click en el botón "About" puede encontrar más información acerca de mí.
+Copiando la dirección de mi página y escribiendo /admin podrán acceder al sitio de administración. User admin y pass 1.
 Muchas gracias por visitar mi página!
 Saludos!
