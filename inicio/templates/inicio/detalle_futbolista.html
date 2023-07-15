@@ -12,5 +12,11 @@ Datos del futbolista {{futbolista.nombre}}
 {% block contenido %}
 <li>Edad: {{futbolista.edad}}</li>
 <li>Fecha de nacimiento: {{futbolista.fecha_nacimiento}}</li>
-<li>Descripción: {{futbolista.descripcion}}</li>
+<li>Descripción: {{futbolista.descripcion|safe}}</li>
+<li>Autor: {{futbolista.autor}}</li>
+<li>Imagen: 
+    {% if futbolista.imagen %}
+                <img src={{futbolista.imagen.url}} alt="" height='120px'>
+                {% endif %}
+
 {% endblock contenido %}

@@ -1,11 +1,11 @@
 # proyectopython
 
-#Hola! Este es mi proyecto, luego de ejecutar el link serán redirigidos a la sección de inicio de mi página.
-#Allí encontrarán 4 secciones incluyendo la de inicio: Sección Futbolistas, sección Hockistas y sección Voleibolistas.
-#Antes de comenzar a crear deportistas, recordar que luego de crear uno, no se recomienda recargar la sección para no volver a enviar los datos, preferible volver a inicio.
-#Tecleando sobre las secciones de Hockistas y Voleibolistas encontrarán formularios para cargar en los correspondientes espacios, nombre, edad y fecha de cumpleaños de deportistas pertenecientes a cada categoría.
-#En la sección de Futbolistas se podrán buscar ,por consultas mediante carácteres, futbolistas dentro de la base de datos.
-#Luego, también en futbolistas existe el botón para acceder al formulario de creación de un nuevo futbolista.
-#Luego de crear cada futbolista, serás redirigido a la sección de buscar.
-#Muchas gracias por visitar mi página! Próximamente será mejorada
-#Saludos!
+Hola! Este es mi proyecto, Sol Figueroa es mi nombre y lo he realizado de manera individual. Luego de ejecutar el link serán redirigidos a la sección de inicio de mi página.
+Usted puede comezar a navegar por ella registrándose y logueándose en la misma para poder acceder a todas las funcionalidades. También puede consultar información sobre su perfil de usuario, modificar y  hasta cargar más información acerca de usted.  
+Allí encontrarán 4 secciones incluyendo la de inicio: sección Futbolistas, sección Hockistas y sección Voleibolistas.
+En la sección de Futbolistas es donde se encuentran desarrolladas todas las consignas del proyecto.
+El modelo de futbolistas permite crear, modificar, eliminar, buscar y consultar más detalles. 
+Sin embargo, en todas las secciones encontrarán formularios para cargar en los correspondientes espacios, nombre, edad y fecha de cumpleaños de deportistas pertenecientes a cada categoría.
+Haciendo click en el botón "About" puede encontrar más información acerca de mí.
+Muchas gracias por visitar mi página!
+Saludos!

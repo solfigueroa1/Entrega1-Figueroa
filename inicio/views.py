@@ -11,16 +11,19 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 def inicio(request):
     return render(request, 'inicio/inicio.html')
 
+def about(request):
+    return render(request,'inicio/about.html')
+
 
 @login_required
 def crear_futbolista(request):
     mensaje = ''
     
     if request.method == 'POST':
-        formulario = CrearFutbolistaFormulario(request.POST)
+        formulario = CrearFutbolistaFormulario(request.POST, request.FILES)
         if formulario.is_valid():
             info = formulario.cleaned_data
-            futbolista = Futbolista(nombre=info['nombre'], edad=info['edad'], fecha_nacimiento=info['fecha_nacimiento'])
+            futbolista = Futbolista(nombre=info['nombre'], edad=info['edad'], fecha_nacimiento=info['fecha_nacimiento'], descripcion=info['descripcion'],autor=info['autor'],imagen=info['imagen'])
             futbolista.save()
             return redirect('inicio:buscar_futbolista')
             mensaje = f'Se creó el/la futbolista {futbolista.nombre}'
@@ -80,7 +83,7 @@ class DetalleFutbolista(DetailView):
 
 class ModificarFutbolista(LoginRequiredMixin,UpdateView):
     model = Futbolista
-    fields = ['nombre', 'edad', 'fecha_nacimiento', 'descripcion']
+    fields = ['nombre', 'edad', 'fecha_nacimiento', 'descripcion', 'autor', 'imagen']
     template_name = "inicio/modificar_futbolista.html"
     success_url = reverse_lazy('inicio:futbolistas')
 ...
