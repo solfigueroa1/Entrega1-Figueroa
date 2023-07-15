@@ -10,3 +10,5 @@ Haciendo click en el botón "About" puede encontrar más información acerca de 
 Copiando la dirección de mi página y escribiendo /admin podrán acceder al sitio de administración. User admin y pass 1.
 Muchas gracias por visitar mi página!
 Saludos!
+
+LINK DE VIDEO !! https://youtu.be/-3IreZXws90
