@@ -10,20 +10,16 @@ Historial de mensajes
 
 {% block contenido %}
 
-
-<button><a class="navbar-brand" href={% url 'mensajería:crear_mensaje' %}>Nuevo Mensaje</a>
-</button>
+<p>{{enviado}}</p>
 
 {% if mensajes %}
-
-{% for mensaje in mensajes %}
-<li> 
-    De {{mensaje.autor}} para {{mensaje.destinatario}}:  {{mensaje.cuerpo}}
-</li>
+{% for mensaje in mensajes  %}
+<li>De {{mensaje.autor}} para {{mensaje.destinatario}}: {{mensaje.cuerpo|safe}}</li>
 {% endfor %}
 
 {% else %}
-<p>No se encontraron mensajes</p>
+No se encontraron mensajes
 {% endif %}
 
+<button><a class="navbar-brand" href={% url 'mensajería:crear_mensaje' %}>Nuevo Mensaje</a></button>
 {% endblock contenido %}
