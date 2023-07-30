@@ -14,7 +14,7 @@
 <li>Nombre: {{user.first_name}}</li>
 <li>Apellido: {{user.last_name}}</li>
 <li>Avatar: 
-    {% if request.user.infoextra.avatar.url %}
+    {% if request.user.infoextra.avatar %}
                 <img src={{request.user.infoextra.avatar.url}} alt="" height='120px'>
     {% endif %}</li>
 <li>Facebook: {% if request.user.infoextra.facebook %}

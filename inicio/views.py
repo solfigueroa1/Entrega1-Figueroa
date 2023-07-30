@@ -25,7 +25,7 @@ def crear_futbolista(request):
             info = formulario.cleaned_data
             futbolista = Futbolista(nombre=info['nombre'], edad=info['edad'], fecha_nacimiento=info['fecha_nacimiento'], descripcion=info['descripcion'],autor=info['autor'],imagen=info['imagen'])
             futbolista.save()
-            return redirect('inicio:buscar_futbolista')
+            return redirect('inicio:futbolistas')
             mensaje = f'Se creó el/la futbolista {futbolista.nombre}'
         else:
             return render(request, 'inicio/crear_futbolista.html', {'formulario' : formulario})
